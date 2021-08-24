@@ -6,7 +6,7 @@ WORKDIR /app
 COPY ./app .
 
 COPY app.py app.py
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 RUN flask
 #COPY . .
 

@@ -4,7 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-def say_hello(username = "WoDDrlld"):
+def say_hello(username = "Woorlld"):
     return '<p>Hello %s!</p>\n' % username
 
 # Some bits of text for the page

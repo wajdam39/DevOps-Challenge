@@ -1,6 +1,8 @@
 name: Super-Linter
 
 on: push
+env:
+  CARGO_TERM_COLOR: always
 
 jobs:
   super-lint:
@@ -9,6 +11,40 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Build with no_std
+        uses: actions-rs/cargo@v1
+          with:
+          command: build
+          args: --no-default-features
+
+      - name: Build default
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+
+      - name: Run tests with no_std
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --no-default-features
+
+      - name: Run tests with no_std in release mode
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --no-default-features --release
+
+      - name: Run tests default
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+
+      - name: Run tests default in release mode
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --release
 
 #       - name: Run Super-Linter
 #         uses: github/super-linter@v3

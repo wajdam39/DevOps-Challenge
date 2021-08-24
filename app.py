@@ -36,9 +36,11 @@ def hello():
     hostname = socket.gethostname()
     return hostname
 
+
 @app.route('/healthz')
 def health():
     return "healthy"
+
 
 @app.route('/ready')
 def ready():

@@ -31,10 +31,10 @@ app.add_url_rule('/<username>', 'hello', (lambda username:
 
 
 print("HELLOO")  
-#@app.route('/')
-#def hello():
-#    hostname = socket.gethostname()
-#    return hostname
+@app.route('/')
+def hello():
+    hostname = socket.gethostname()
+    return hostname
 
 @app.route('/healthz')
 def health():

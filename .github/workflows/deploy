@@ -18,8 +18,8 @@ jobs:
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v18
       with:
-        aws_access_key: ${{ AKIAV7QB45HD4WIQOUNO }}
-        aws_secret_key: ${{ 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 }}
+        aws_access_key: ${{ AKIAV7QB45HDXZBQNGVC }}
+        aws_secret_key: ${{ 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 }}
         application_name: flask-app
         environment_name: Flaskapp-env-1
         version_label: 12345

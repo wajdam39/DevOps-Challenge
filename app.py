@@ -30,22 +30,22 @@ app.add_url_rule('/<username>', 'hello', (lambda username:
 
 
 print("HELLOO")  
-@app.route('/')
+@app.route("/")
 def hello():
     hostname = socket.gethostname()
     return hostname
 
 
-@app.route('/healthz')
+@app.route("/healthz")
 def health():
     return "healthy"
 
 
-@app.route('/ready')
+@app.route("/ready")
 def ready():
     return "ready"
 
   
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', port = 5000, debug = True)
+    app.run(host ="0.0.0.0", port=5000, debug = True)
     

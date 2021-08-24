@@ -29,7 +29,9 @@ app.add_url_rule('/<username>', 'hello', (lambda username:
     header_text + say_hello(username) + home_link + footer_text))
 
 
-print("HELLOO")  
+print("HELLOO")
+
+
 @app.route("/")
 def hello():
     hostname = socket.gethostname()
@@ -47,5 +49,5 @@ def ready():
 
   
 if __name__ == "__main__":
-    app.run(host ="0.0.0.0", port=5000, debug = True)
+    app.run(host ="0.0.0.0", port=5000, debug=True)
     

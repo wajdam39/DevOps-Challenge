@@ -4,33 +4,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-def say_hello(username = "Woofaaffrlld"):
-    return '<p>Hello %s!</p>\n' % username
-
-# Some bits of text for the page
-header_text = '''
-    <html>\n<head> <title>EB Flask Test</title> </head>\n<body>'''
-instructions = '''
-    <p><em>Hint</em>: This is a RESTful web service! Append a username
-    to the URL (for example: <code>/Thelonious</code>) to say hello to
-    someone specific.</p>\n'''
-home_link = '<p><a href="/">Back</a></p>\n'
-footer_text = '</body>\n</html>'
-
-
-# Add a rule for the index page
-app.add_url_rule('/', 'index', (lambda: header_text +
-    say_hello() + instructions + footer_text))
-
-# Add a rule when the page is accessed with a name appended to the site
-# URL
-app.add_url_rule('/<username>', 'hello', (lambda username:
-    header_text + say_hello(username) + home_link + footer_text))
-
-
-print("HELLOO")
-
-
 @app.route("/")
 def hello():
     hostname = socket.gethostname()

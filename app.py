@@ -1,5 +1,6 @@
-from flask import Flask
 import socket
+from flask import Flask
+
 
 
 app = Flask(__name__)
@@ -26,9 +27,6 @@ app.add_url_rule('/', 'index', (lambda: header_text +
 # URL
 app.add_url_rule('/<username>', 'hello', (lambda username:
     header_text + say_hello(username) + home_link + footer_text))
-
-
-
 
 
 print("HELLOO")  

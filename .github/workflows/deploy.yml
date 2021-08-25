@@ -21,7 +21,7 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: flask-app
         environment_name: Flaskapp-env-1
-        version_label: flask6
+        version_label: flask7
         region: us-east-2
         deployment_package: flask.zip
         S3Key: fl.zip

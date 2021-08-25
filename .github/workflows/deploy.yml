@@ -2,7 +2,7 @@ name: deploy-to-eb
 
 on:
   push:
-    branches: [ master ]
+    branches: main
 
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
         run: |
           aws elasticbeanstalk create-application-version \
           --application-name flask-app \
-          --source-bundle S3Bucket="elasticbeanstalk-us-east-2-411247110599",S3Key="deploy_package.zip" \
+          --source-bundle S3Bucket="elasticbeanstalk-us-east-2-411247110599",S3Key="flask.zip" \
           --version-label "ver-${{ github.sha }}" \
           --description "commit-sha-${{ github.sha }}"
 

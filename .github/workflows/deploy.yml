@@ -24,3 +24,4 @@ jobs:
         version_label: flask5
         region: us-east-2
         deployment_package: flask.zip
+        S3Key: fl.zip

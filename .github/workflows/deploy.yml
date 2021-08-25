@@ -22,6 +22,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: f
         environment_name: Flaskapp-env-1
-        version_label: flask1
+        version_label: flask2
         region: us-east-2
-        run: ./CD
+        deployment_package: flask2.zip

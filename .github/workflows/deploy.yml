@@ -20,8 +20,9 @@ jobs:
       with: 
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: f
+        application_name: flask-app
         environment_name: Flaskapp-env-1
         version_label: flask2
         region: us-east-2
+        directory: null
         deployment_package: flask.zip

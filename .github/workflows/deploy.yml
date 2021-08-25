@@ -22,8 +22,8 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: flask-app
         environment_name: Flaskapp-env-1
-        version_label: flask
+        version_label: flask'%s
         region: us-east-2
         Wait for deployment: true
         Recovery wait time: 45
-        deployment_package: ./flask1.zip
+        deployment_package: ./flask.zip

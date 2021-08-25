@@ -24,4 +24,5 @@ jobs:
         environment_name: Flaskapp-env-1
         version_label: flask
         region: us-east-2
+        key: flask.zip
         deployment_package: flask.zip

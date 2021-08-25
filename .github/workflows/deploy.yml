@@ -24,7 +24,6 @@ jobs:
         environment_name: Flaskapp-env-1
         version_label: flask
         region: us-east-2
-        Existing bucket Name: elasticbeanstalk-us-east-2-411247110599
         Wait for deployment: true
         Recovery wait time: 45
-        deployment_package: flask.zip
+        deployment_package: ./flask1.zip

@@ -13,7 +13,7 @@ jobs:
 
     - name: Generate deployment package
       run: zip -r flask.zip . -x '*.git*'
-
+      
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v18
       with: 
